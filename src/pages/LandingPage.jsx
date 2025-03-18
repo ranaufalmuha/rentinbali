@@ -1,9 +1,71 @@
 import React from 'react'
 import { HeaderSection } from '../components/HeaderSection'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faArrowUp, faCalendar, faCarSide, faGasPump } from "@fortawesome/free-solid-svg-icons";
 
 export const LandingPage = () => {
+    const listCar = [
+        {
+            model: "BMW M5",
+            imgUrl: "https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            year: "2025",
+            transmission: "Automatic",
+            fuel_type: "Gasoline",
+            price: {
+                daily: 2480000,
+                weekly: 1500000,
+                monthly: 70000000,
+            }
+        },
+        {
+            model: "2025 Rolls-Royce Phantom",
+            imgUrl: "https://hips.hearstapps.com/hmg-prod/images/phantom-scintilla-private-collection-0-1-66b50a5eddd44.jpg?crop=0.832xw:0.832xh;0.0849xw,0.168xh&resize=700:*",
+            year: "2025",
+            transmission: "Automatic",
+            fuel_type: "Gasoline",
+            price: {
+                daily: 2480000,
+                weekly: 1500000,
+                monthly: 70000000,
+            }
+        },
+        {
+            model: "2025 Rolls-Royce Ghost",
+            imgUrl: "https://hips.hearstapps.com/hmg-prod/images/2025-rolls-royce-ghost-ii-29-67053b7543813.jpg?crop=0.580xw:0.438xh;0.260xw,0.391xh&resize=700:*",
+            year: "2025",
+            transmission: "Automatic",
+            fuel_type: "Gasoline",
+            price: {
+                daily: 2480000,
+                weekly: 1500000,
+                monthly: 70000000,
+            }
+        },
+        {
+            model: "2025 Rolls-Royce Spectre",
+            imgUrl: "https://hips.hearstapps.com/hmg-prod/images/2024-rolls-royce-spectre-183-671fa78bc29e8.jpg?crop=0.590xw:0.496xh;0.205xw,0.372xh&resize=700:*",
+            year: "2025",
+            transmission: "Automatic",
+            fuel_type: "Gasoline",
+            price: {
+                daily: 2480000,
+                weekly: 1500000,
+                monthly: 70000000,
+            }
+        },
+        {
+            model: "2019 Rolls-Royce Ghost Series II",
+            imgUrl: "https://hips.hearstapps.com/hmg-prod/images/2015-rolls-royce-series-ii-mmp-1-1556749597.jpg?crop=0.971xw:0.890xh;0.0224xw,0.110xh&resize=700:*",
+            year: "2025",
+            transmission: "Automatic",
+            fuel_type: "Gasoline",
+            price: {
+                daily: 2480000,
+                weekly: 1500000,
+                monthly: 70000000,
+            }
+        }
+    ];
     return (
         <div className='flex flex-col items-center'>
             {/* section welcome  */}
@@ -11,8 +73,12 @@ export const LandingPage = () => {
             <section className='px-8 container duration-300'>
                 <div className=" relative h-[80dvh] max-h-[800px] rounded-3xl overflow-hidden flex justify-center items-center bg-black text-white">
                     <div className="z-10 flex flex-col items-center">
-                        <p className='text-6xl font-normal text-center max-w-[1000px] px-8 py-6'>Experience Perfect Lifestyle Management</p>
-                        <p className='text-center text-xl max-w-[700px] px-8'>We’re here to make you feel special catering to your unique needs with care and the utmost attention.</p>
+                        <p className='text-6xl font-normal text-center max-w-[1000px] px-8 py-6'>Explore Bali in Comfort and Style</p>
+                        <p className='text-center text-xl max-w-[700px] px-8'>Explore Bali’s beauty with our reliable car rentals and unforgettable tour packages today</p>
+                        <button className='mt-8 py-3 px-6 bg-accent rounded-full hover:scale-110 duration-300 flex items-center gap-4'>
+                            <p>View Our Services</p>
+                            <FontAwesomeIcon icon={faArrowRight} />
+                        </button>
                     </div>
                     <video
                         autoPlay
@@ -55,9 +121,49 @@ export const LandingPage = () => {
 
             {/* section Featured Cars  */}
             <div className="h-24"></div>
-            <section className='px-8 container flex flex-col gap-12'>
+            <section className='px-8 container flex flex-col gap-12 duration-300'>
                 <HeaderSection sectionName={"All Vehicles"} title={"70+ Cars Are Available"} />
+                <div className="flex justify-end gap-4 items-center">
+                    <p>Price By : </p>
+                    <div className="px-4 py-2 rounded-xl">
+                        <select value="" className=''>
+                            <option name="" id="">Daily</option>
+                            <option name="" id="">Weekly</option>
+                            <option name="" id="">Monthly</option>
+                        </select>
+                    </div>
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-12 duration-300">
+                    {listCar.map((item) => (
+                        <div className="w-full rounded-3xl overflow-hidden flex flex-col relative group duration-300 shadow-xl hover:scale-105 ">
+                            <div className="w-full aspect-video bg-black relative overflow-hidden">
+                                <img src={item.imgUrl} alt="" draggable={false} className=' absolute top-0 left-0 w-full h-full object-cover opacity-80 group-hover:scale-110 duration-300' />
+                            </div>
+                            <div className="p-8 flex flex-col gap-4">
+                                <p className='text-xl font-normal'>{item.model}</p>
+                                <div className="flex flex-col gap-2">
+                                    <div className="flex gap-2 items-center">
+                                        <FontAwesomeIcon icon={faCalendar} className='w-6' />
+                                        <p>{item.year}</p>
+                                    </div>
+                                    <div className="flex gap-2 items-center">
+                                        <FontAwesomeIcon icon={faCarSide} className='w-6' />
+                                        <p>{item.transmission}</p>
+                                    </div>
+                                    <div className="flex gap-2 items-center">
+                                        <FontAwesomeIcon icon={faGasPump} className='w-6' />
+                                        <p>{item.fuel_type}</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center justify-between">
+                                    <p className='font-bold text-lg'>IDR 2.480k /Day</p>
+                                    <button className='py-3 px-6 border rounded-full hover:scale-110 duration-300'>Rent Now</button>
+                                </div>
+                            </div>
 
+                        </div>
+                    ))}
+                </div>
             </section>
 
             {/* End  */}
