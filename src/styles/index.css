@@ -11,3 +11,7 @@
   --breakpoint-xs: 30rem;
   --breakpoint-2xs: 25rem;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
