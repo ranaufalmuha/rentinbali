@@ -4,7 +4,7 @@ import { Navbar } from "./Navbar";
 
 export const MainLayout = ({ children }) => {
   return (
-    <main className="overflow-hidden cursor-crosshair scroll-smooth font-light">
+    <main className="overflow-hidden cursor-crosshair scroll-smooth font-light max-2xs:text-sm">
       <div className="flex flex-col justify-between min-h-dvh">
         <Navbar />
         {children}

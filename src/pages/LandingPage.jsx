@@ -71,11 +71,11 @@ export const LandingPage = () => {
             {/* section welcome  */}
             <div className="h-24"></div>
             <section className='px-8 container duration-300'>
-                <div className=" relative h-[80dvh] max-h-[800px] rounded-3xl overflow-hidden flex justify-center items-center bg-black text-white">
+                <div className=" relative h-[60dvh] max-h-[800px] rounded-3xl overflow-hidden flex justify-center items-center bg-black text-white">
                     <div className="z-10 flex flex-col items-center">
-                        <p className='text-6xl font-normal text-center max-w-[1000px] px-8 py-6'>Explore Bali in Comfort and Style</p>
-                        <p className='text-center text-xl max-w-[700px] px-8'>Explore Bali’s beauty with our reliable car rentals and unforgettable tour packages today</p>
-                        <button className='mt-8 py-3 px-6 bg-accent rounded-full hover:scale-110 duration-300 flex items-center gap-4'>
+                        <p className='text-3xl md:text-6xl font-normal text-center max-w-[1000px] px-8 py-6'>Explore Bali in Comfort and Style</p>
+                        <p className='text-center md:text-xl max-w-[700px] px-8'>Explore Bali’s beauty with our reliable car rentals and unforgettable tour packages today</p>
+                        <button className='mt-8 py-3 px-6 bg-accent rounded-full hover:scale-110 duration-300 flex items-center gap-4 max-md:text-sm text-black'>
                             <p>View Our Services</p>
                             <FontAwesomeIcon icon={faArrowRight} />
                         </button>
@@ -140,8 +140,8 @@ export const LandingPage = () => {
                                 <img src={item.imgUrl} alt="" draggable={false} className=' absolute top-0 left-0 w-full h-full object-cover opacity-80 group-hover:scale-110 duration-300' />
                             </div>
                             <div className="p-8 flex flex-col gap-4">
-                                <p className='text-xl font-normal'>{item.model}</p>
-                                <div className="flex flex-col gap-2">
+                                <p className='max-2xs:text-lg text-xl font-normal duration-300'>{item.model}</p>
+                                <div className="flex flex-col gap-2 max-xs:hidden">
                                     <div className="flex gap-2 items-center">
                                         <FontAwesomeIcon icon={faCalendar} className='w-6' />
                                         <p>{item.year}</p>
@@ -155,9 +155,9 @@ export const LandingPage = () => {
                                         <p>{item.fuel_type}</p>
                                     </div>
                                 </div>
-                                <div className="flex items-center justify-between">
-                                    <p className='font-bold text-lg'>IDR 2.480k /Day</p>
-                                    <button className='py-3 px-6 border rounded-full hover:scale-110 duration-300'>Rent Now</button>
+                                <div className="flex max-2xs:flex-col max-2xs:items-start gap-2 items-center justify-between">
+                                    <p className='font-bold max-xs:text-base text-lg'>IDR 2.480k /Day</p>
+                                    <button className='max-xs:py-2 max-xs:px-4 py-3 px-6 bg-accent rounded-full hover:scale-110 duration-300'>Rent Now</button>
                                 </div>
                             </div>
 

@@ -4,5 +4,10 @@
   --color-background: white;
   --color-second-background: #1c1c1c;
   --color-disabled: gray;
-  --color-accent: #2c5f34;
+  --color-accent: #ffd700;
+
+  --color-textColor: black;
+
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xs: 25rem;
 }
