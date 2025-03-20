@@ -10,7 +10,7 @@ export const Navbar = () => {
         {/* logo  */}
         <div className="flex items-center gap-2">
           <FontAwesomeIcon icon={faCar} className="text-xl" />
-          <p className="font-medium max-sm:text-sm">RentInBali</p>
+          <p className="font-medium max-sm:text-sm">Velora</p>
         </div>
         <div className="flex items-center gap-4 capitalize max-sm:hidden">
           <p>Service</p>

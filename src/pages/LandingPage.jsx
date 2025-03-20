@@ -82,7 +82,7 @@ export const LandingPage = () => {
     const listTour = [
         {
             name: "Full-Day Ubud & Rice Terraces",
-            backgroundUrl: "https://plus.unsplash.com/premium_photo-1734629912149-4d949f490956?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            backgroundUrl: "https://images.pexels.com/photos/4530514/pexels-photo-4530514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             destinations: [
                 {
                     place: "Sacred Monkey Forest",
@@ -111,47 +111,41 @@ export const LandingPage = () => {
             ],
         },
         {
-            name: "Beach & Sunset Tour",
-            backgroundUrl: "https://images.unsplash.com/photo-1564981447395-903d78d49a28?q=80&w=1372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            name: "Nusa Penida Adventure",
+            backgroundUrl: "https://images.unsplash.com/photo-1532254497630-c74966e79621?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             destinations: [
                 {
-                    place: "Uluwatu Temple",
+                    place: "Kelingking Beach",
                 },
                 {
-                    place: "Jimbaran Beach",
+                    place: "Angel's Billabong",
                 },
                 {
-                    place: "Kecak Fire Dance",
+                    place: "Crystal Bay",
                 },
             ],
         },
         {
-            name: "Beach & Sunset Tour",
-            backgroundUrl: "https://images.unsplash.com/photo-1564981447395-903d78d49a28?q=80&w=1372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            name: "North Bali Exploration",
+            backgroundUrl: "https://images.unsplash.com/photo-1680094513147-a9b7ce9b209b?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             destinations: [
                 {
-                    place: "Uluwatu Temple",
+                    place: "Gitgit Waterfall",
                 },
                 {
-                    place: "Jimbaran Beach",
+                    place: "Ulun Danu Temple",
                 },
                 {
-                    place: "Kecak Fire Dance",
+                    place: "Lovina Beach",
                 },
             ],
         },
         {
-            name: "Beach & Sunset Tour",
-            backgroundUrl: "https://images.unsplash.com/photo-1564981447395-903d78d49a28?q=80&w=1372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            name: "Customized Private Tour",
+            backgroundUrl: "https://c1.wallpaperflare.com/preview/262/812/847/travel-outdoors-girl-landscape.jpg",
             destinations: [
                 {
-                    place: "Uluwatu Temple",
-                },
-                {
-                    place: "Jimbaran Beach",
-                },
-                {
-                    place: "Kecak Fire Dance",
+                    place: "Choose your own itinerary",
                 },
             ],
         },
@@ -224,7 +218,7 @@ export const LandingPage = () => {
                             src="https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt=""
                             draggable={false}
-                            className=" absolute top-0 left-0 w-full h-full object-cover opacity-50 group-hover:scale-125 duration-300"
+                            className=" absolute top-0 left-0 w-full h-full object-cover opacity-80 group-hover:opacity-50 group-hover:scale-125 duration-300"
                         />
                     </div>
                     <div className="w-full md:w-1/2 md:max-w-[500px] aspect-square rounded-3xl overflow-hidden flex flex-col justify-end p-10 gap-4 text-white relative group duration-300 bg-black shadow-lg">
@@ -245,7 +239,7 @@ export const LandingPage = () => {
                             src="https://images.unsplash.com/photo-1620104493388-8747c90fcc2d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt=""
                             draggable={false}
-                            className=" absolute top-0 left-0 w-full h-full object-cover opacity-50 group-hover:scale-125 duration-300"
+                            className=" absolute top-0 left-0 w-full h-full object-cover opacity-80 group-hover:opacity-50 group-hover:scale-125 duration-300"
                         />
                     </div>
                 </div>
@@ -324,13 +318,18 @@ export const LandingPage = () => {
                 <div className="relative w-full">
                     <div className="flex gap-12 overflow-x-auto snap-x snap-mandatory pb-4 no-scrollbar " ref={scrollRef}>
                         {listTour.map((item, index) => (
-                            <div key={index} className="w-1/2 min-w-[250px] max-w-[400px] flex-shrink-0 shadow-lg aspect-[9/16] rounded-3xl relative overflow-hidden snap-start">
-                                <div className="flex flex-col justify-end h-full p-8 text-white no-scrollbar">
+                            <div key={index} className="w-1/2 min-w-[250px] max-w-[400px] flex-shrink-0 shadow-lg aspect-[9/16] rounded-3xl relative overflow-hidden snap-start group">
+                                <div className="flex flex-col justify-end h-full p-8 text-white no-scrollbar gap-4">
                                     <p className="text-3xl">{item.name}</p>
+                                    <div className="flex flex-col gap-2">
+                                        {item.destinations.map((item) => (
+                                            <p>📍{item.place}</p>
+                                        ))}
+                                    </div>
                                 </div>
                                 {/* Background */}
                                 <div className="absolute w-full h-full top-0 left-0 -z-10 bg-black">
-                                    <img src={item.backgroundUrl} className="w-full h-full object-cover opacity-80" alt="" />
+                                    <img src={item.backgroundUrl} className="w-full h-full object-cover opacity-80 group-hover:opacity-50 group-hover:scale-110 duration-300" alt="" />
                                 </div>
                             </div>
                         ))}
