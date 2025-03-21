@@ -1,6 +1,7 @@
 import { faCar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -13,10 +14,10 @@ export const Navbar = () => {
           <p className="font-medium max-sm:text-sm">Velora</p>
         </div>
         <div className="flex items-center gap-4 capitalize max-sm:hidden">
-          <p>Service</p>
-          <p>Cars</p>
-          <p>Tour</p>
-          <p>About Us</p>
+          <a href="#service">Service</a>
+          <a href="#all_vehicles">Cars</a>
+          <a href="#tour_packages">Tour</a>
+          <a href="#why_choose_us">About Us</a>
         </div>
 
 

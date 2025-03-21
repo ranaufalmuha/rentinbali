@@ -8,7 +8,11 @@ import {
     faCalendar,
     faCarSide,
     faGasPump,
+    faFaceLaughBeam,
+    faRankingStar,
+    faHandHoldingDollar,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 export const LandingPage = () => {
     const listCar = [
@@ -151,6 +155,40 @@ export const LandingPage = () => {
         },
     ];
 
+    const listTestimonials = [
+        {
+            name: "John Doe",
+            country: "Turkiye",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, voluptate. Lorem ipsum dolor sit.🔥",
+            img: "https://avatars.githubusercontent.com/u/153919071?v=4",
+        }, {
+            name: "Señorita",
+            country: "Spain",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, voluptate. 🥳 Lorem ipsum dolor sit. orem ipsum dolor sit amet consectetur adipisicing elit.🤍 ",
+            img: "https://m.media-amazon.com/images/M/MV5BYTkzMDllOGUtMzQ5Yi00MDk3LWIxZjAtNTFhNzM5NWVkNjc4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        }, {
+            name: "John Doe",
+            country: "Turkiye",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, voluptate. Lorem ipsum dolor sit.🔥",
+            img: "https://avatars.githubusercontent.com/u/153919071?v=4",
+        }, {
+            name: "Señorita",
+            country: "Spain",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, voluptate. 🥳 Lorem ipsum dolor sit. orem ipsum dolor sit amet consectetur adipisicing elit.🤍 ",
+            img: "https://m.media-amazon.com/images/M/MV5BYTkzMDllOGUtMzQ5Yi00MDk3LWIxZjAtNTFhNzM5NWVkNjc4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        }, {
+            name: "John Doe",
+            country: "Turkiye",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, voluptate. Lorem ipsum dolor sit.🔥",
+            img: "https://avatars.githubusercontent.com/u/153919071?v=4",
+        }, {
+            name: "Señorita",
+            country: "Spain",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, voluptate. 🥳 Lorem ipsum dolor sit. orem ipsum dolor sit amet consectetur adipisicing elit.🤍 ",
+            img: "https://m.media-amazon.com/images/M/MV5BYTkzMDllOGUtMzQ5Yi00MDk3LWIxZjAtNTFhNzM5NWVkNjc4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        }
+    ]
+
     const scrollRef = useRef(null);
 
     const scroll = (direction) => {
@@ -162,11 +200,12 @@ export const LandingPage = () => {
             });
         }
     };
+
     return (
         <div className="flex flex-col items-center">
             {/* section welcome  */}
             <div className="h-24"></div>
-            <section className="px-8 container duration-300">
+            <section id="welcome" className="px-8 container duration-300">
                 <div className=" relative h-[60dvh] max-h-[800px] rounded-3xl overflow-hidden flex justify-center items-center bg-black text-white shadow-lg">
                     <div className="z-10 flex flex-col items-center">
                         <p className="text-3xl md:text-6xl font-normal text-center max-w-[1000px] px-8 py-6">
@@ -176,10 +215,10 @@ export const LandingPage = () => {
                             Explore Bali’s beauty with our reliable car rentals and
                             unforgettable tour packages today
                         </p>
-                        <button className="mt-8 py-3 px-6 bg-accent rounded-full hover:scale-110 duration-300 flex items-center gap-4 max-md:text-sm text-black">
+                        <a href="#service" className="mt-8 py-3 px-6 bg-accent rounded-full hover:scale-110 duration-300 flex items-center gap-4 max-md:text-sm text-black">
                             <p>View Our Services</p>
                             <FontAwesomeIcon icon={faArrowRight} />
-                        </button>
+                        </a>
                     </div>
                     <video
                         autoPlay
@@ -194,13 +233,13 @@ export const LandingPage = () => {
 
             {/* section Service  */}
             <div className="h-24"></div>
-            <section className="px-8 container flex flex-col gap-12 duration-300">
+            <section id="service" className="px-8 container flex flex-col gap-12 duration-300">
                 <HeaderSection
                     sectionName={"Service We Offer"}
                     title={"Certified Excellence"}
                 />
                 <div className="flex flex-col md:flex-row gap-8 duration-300">
-                    <div className="w-full md:w-1/2 md:max-w-[500px] aspect-square rounded-3xl overflow-hidden flex flex-col justify-end p-10 gap-4 text-white relative group duration-300 bg-black shadow-lg">
+                    <a href="#all_vehicles" className="w-full md:w-1/2 md:max-w-[500px] aspect-square rounded-3xl overflow-hidden flex flex-col justify-end p-10 gap-4 text-white relative group duration-300 bg-black shadow-lg">
                         <p className="text-2xl z-10">Car Rental</p>
                         <p className="z-10">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -220,8 +259,8 @@ export const LandingPage = () => {
                             draggable={false}
                             className=" absolute top-0 left-0 w-full h-full object-cover opacity-80 group-hover:opacity-50 group-hover:scale-125 duration-300"
                         />
-                    </div>
-                    <div className="w-full md:w-1/2 md:max-w-[500px] aspect-square rounded-3xl overflow-hidden flex flex-col justify-end p-10 gap-4 text-white relative group duration-300 bg-black shadow-lg">
+                    </a>
+                    <a href="#tour_packages" className="w-full md:w-1/2 md:max-w-[500px] aspect-square rounded-3xl overflow-hidden flex flex-col justify-end p-10 gap-4 text-white relative group duration-300 bg-black shadow-lg">
                         <p className="text-2xl z-10">Tour Packages</p>
                         <p className="z-10">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -241,13 +280,13 @@ export const LandingPage = () => {
                             draggable={false}
                             className=" absolute top-0 left-0 w-full h-full object-cover opacity-80 group-hover:opacity-50 group-hover:scale-125 duration-300"
                         />
-                    </div>
+                    </a>
                 </div>
             </section>
 
-            {/* section Featured Cars  */}
+            {/* section All Vehicles  */}
             <div className="h-24"></div>
-            <section className="px-8 container flex flex-col gap-12 duration-300">
+            <section id="all_vehicles" className="px-8 container flex flex-col gap-12 duration-300">
                 <HeaderSection
                     sectionName={"All Vehicles"}
                     title={"70+ Cars Are Available"}
@@ -302,7 +341,7 @@ export const LandingPage = () => {
                                         IDR 2.480k /Day
                                     </p>
                                     <button className="max-xs:py-2 max-xs:px-4 py-3 px-6 bg-accent rounded-full hover:scale-110 duration-300">
-                                        Rent Now
+                                        Book Now
                                     </button>
                                 </div>
                             </div>
@@ -312,7 +351,7 @@ export const LandingPage = () => {
             </section>
 
             {/* section Tour Packages  */}
-            <div className="h-24"></div>
+            <div id="tour_packages" className="h-24"></div>
             <section className="flex flex-col items-start gap-12 w-full  duration-300 container px-8">
                 <HeaderSection sectionName={"Tour Packages"} title={"Explore Bali"} />
                 <div className="relative w-full">
@@ -342,6 +381,96 @@ export const LandingPage = () => {
                         <button className="bg-accent rounded-2xl w-16 aspect-square shadow-lg" onClick={() => scroll('right')}>
                             <FontAwesomeIcon icon={faChevronRight} />
                         </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* section Why Choose Us  */}
+            <div className="h-24"></div>
+            <section id="why_choose_us" className="px-8 container flex flex-col gap-12 duration-300 bg-second-background text-white py-20 text-center items-center rounded-3xl">
+                <div className="flex flex-col gap-2">
+                    <p className="capitalize">why choose us?</p>
+                    <p className="text-3xl max-w-[600px] font-medium">Your Reliable Partner for Unforgettable Bali Adventures</p>
+                </div>
+                <div className="flex max-md:flex-col max-md:items-center w-full gap-8 justify-center ">
+                    {/* 1st  */}
+                    <div className="px-10 py-4 flex flex-col items-center max-md:w-full w-1/3 gap-4 max-w-[300px]">
+                        <FontAwesomeIcon icon={faFaceLaughBeam} className="text-4xl" />
+                        <div className="flex flex-col gap-2">
+                            <p className="text-xl">Reliability</p>
+                            <p className="text-disabled text-sm">Our fleet of well-maintained vehicles ensures that you can explore Bali with confidence.</p>
+                        </div>
+                    </div>
+
+                    {/* 2nd  */}
+                    <div className="px-10 py-4 flex flex-col items-center max-md:w-full w-1/3 gap-4 max-w-[300px]">
+                        <FontAwesomeIcon icon={faHandHoldingDollar} className="text-4xl" />
+                        <div className="flex flex-col gap-2">
+                            <p className="text-xl">Best Prices</p>
+                            <p className="text-disabled text-sm">We offer competitive pricing without compromising on quality.</p>
+                        </div>
+                    </div>
+
+                    {/* 3rd  */}
+                    <div className="px-10 py-4 flex flex-col items-center max-md:w-full w-1/3 gap-4 max-w-[300px]">
+                        <FontAwesomeIcon icon={faRankingStar} className="text-4xl" />
+                        <div className="flex flex-col gap-2">
+                            <p className="text-xl">High-Quality Service</p>
+                            <p className="text-disabled text-sm">Our dedicated team is committed to providing outstanding customer service.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <Link to={""} className="max-xs:py-2 max-xs:px-4 py-3 px-6 bg-accent rounded-full hover:scale-110 duration-300 text-black">Book Now</Link>
+            </section>
+
+            {/* section Testimonials  */}
+            <div className="h-24"></div>
+            <section id="testimonials" className="flex flex-col items-center gap-12 w-full  duration-300  ">
+                <div className="container px-8">
+                    <HeaderSection sectionName={"Testimonials"} title={"Satisfied Customers"} />
+                </div>
+                {/* contents  */}
+                <div className="w-full inline-flex flex-nowrap">
+                    <div className="flex">
+                        {/* 1st  */}
+                        <div className="animate-infinite-scroll flex">
+                            {listTestimonials.map((item, i) => (
+                                <div key={i} className="flex-shrink-0 pr-4">
+                                    <div className="p-8 border border-disabled/20 rounded-2xl flex flex-col gap-3 hover:scale-110 duration-300 shadow-xl">
+                                        {/* Name  */}
+                                        <div className="flex items-center gap-3">
+                                            <img src={item.img} className=" w-9 h-9 object-cover rounded-full" alt="" />
+                                            <div className="flex flex-col">
+                                                <p className="text-base font-semibold">{item.name}</p>
+                                                <p className="text-xs">{item.country}</p>
+                                            </div>
+                                        </div>
+                                        {/* Comments  */}
+                                        <p className="w-[270px] text-sm line-clamp-6">{item.text}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        {/* 2nd  */}
+                        <div className="animate-infinite-scroll flex" aria-hidden="true">
+                            {listTestimonials.map((item, i) => (
+                                <div key={i} className="flex-shrink-0 pr-4">
+                                    <div className="p-8 border border-disabled/20 rounded-2xl  flex flex-col gap-3 hover:scale-110 duration-300 shadow-xl">
+                                        {/* Name  */}
+                                        <div className="flex items-center gap-3">
+                                            <img src={item.img} className=" w-9 h-9 object-cover rounded-full" alt="" />
+                                            <div className="flex flex-col">
+                                                <p className="text-base font-semibold">{item.name}</p>
+                                                <p className="text-xs">{item.country}</p>
+                                            </div>
+                                        </div>
+                                        {/* Comments  */}
+                                        <p className="w-[270px] text-sm line-clamp-6">{item.text}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
