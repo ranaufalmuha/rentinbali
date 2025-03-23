@@ -11,6 +11,9 @@ import {
     faFaceLaughBeam,
     faRankingStar,
     faHandHoldingDollar,
+    faPhone,
+    faLocationDot,
+    faComment,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
@@ -426,7 +429,7 @@ export const LandingPage = () => {
 
             {/* section Testimonials  */}
             <div className="h-24"></div>
-            <section id="testimonials" className="flex flex-col items-center gap-12 w-full  duration-300  ">
+            <section id="testimonials" className="flex flex-col items-center gap-12 w-full duration-300">
                 <div className="container px-8">
                     <HeaderSection sectionName={"Testimonials"} title={"Satisfied Customers"} />
                 </div>
@@ -470,6 +473,51 @@ export const LandingPage = () => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Contact Us  */}
+            <div className="h-24"></div>
+            <section className="flex flex-col items-start gap-12 w-full  duration-300 container px-8">
+                <HeaderSection sectionName={"contact us"} title={"Get in Touch"} />
+                {/* contents  */}
+                <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                    {/* Call Us  */}
+                    <div className="shadow-xl p-10 rounded-3xl flex flex-col gap-4">
+                        <div className="flex flex-col gap-2">
+                            <p className="text-xl font-normal">Call Us</p>
+                            <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, debitis?</p>
+                        </div>
+                        <div className="flex items-center text-accent gap-3">
+                            <FontAwesomeIcon icon={faPhone} />
+                            <p className="font-medium">(255) 423-2342</p>
+
+                        </div>
+                    </div>
+                    {/* Call Us  */}
+                    <div className="shadow-xl p-10 rounded-3xl flex flex-col gap-4">
+                        <div className="flex flex-col gap-2">
+                            <p className="text-xl font-normal">Visit Us</p>
+                            <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, debitis?</p>
+                        </div>
+                        <div className="flex items-center text-accent gap-3">
+                            <FontAwesomeIcon icon={faLocationDot} />
+                            <a href="#" className="font-medium">Bali, Indonesia</a>
+
+                        </div>
+                    </div>
+                    {/* Start Chat  */}
+                    <div className="shadow-xl p-10 rounded-3xl flex flex-col gap-4">
+                        <div className="flex flex-col gap-2">
+                            <p className="text-xl font-normal">Visit Us</p>
+                            <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, debitis?</p>
+                        </div>
+                        <div className="flex items-center text-accent gap-2">
+                            <FontAwesomeIcon icon={faComment} />
+                            <a href="#" className="font-medium">Start Chat</a>
+
                         </div>
                     </div>
                 </div>
